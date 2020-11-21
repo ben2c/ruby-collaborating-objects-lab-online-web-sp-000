@@ -16,7 +16,7 @@ class Artist
     @@all << self     #saves all created instances of Artist class in #@@all class variable
   end
 
-  def all      #class method all returns all instances of Artist class
+  def self.all      #class method all returns all instances of Artist class
     @@all
   end
 
