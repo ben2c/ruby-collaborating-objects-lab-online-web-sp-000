@@ -18,6 +18,6 @@ class Song
   end
 
   def self.all
-    artist.all
+    Artist.all
   end
 end
