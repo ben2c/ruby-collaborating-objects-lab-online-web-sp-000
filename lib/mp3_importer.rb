@@ -1,3 +1,4 @@
+
 class MP3Importer
   attr_accessor :path
 
@@ -7,7 +8,13 @@ class MP3Importer
 
   def files
     @files = Dir.entries(path)
-    puts delete
+    @files.delete_if { |file| file == "." || file == ".."}
+  end
+
+  def import
+    files.each do |song|
+      Song.new_by_filename(song)
+    end
   end
 
 end
